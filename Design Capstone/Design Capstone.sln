@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design Capstone", "Design Capstone.csproj", "{B9E9DF4E-0E39-FB52-7995-F89F71E8A2D3}"
 EndProject
 Global

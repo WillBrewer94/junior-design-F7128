@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/DesignCapstone.unity
+- path: Assets/Scripts/Example/example.unity
   isLoaded: 1
   isActive: 1

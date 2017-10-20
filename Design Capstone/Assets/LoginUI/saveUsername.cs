@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class saveUsername : MonoBehaviour {
 
+    public Text DisplayText;
+
     public InputField inputName;
     public Text textName;
 
@@ -30,7 +32,7 @@ public class saveUsername : MonoBehaviour {
 	void Update () {
         if (savedName != null)
         {
-            textName.text = savedName;
+            DisplayText.text = savedName;
         }
     }
 

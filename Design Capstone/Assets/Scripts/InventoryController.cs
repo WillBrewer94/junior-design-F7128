@@ -35,5 +35,6 @@ public class InventoryController : MonoBehaviour {
 			}
 			update = false;
 		}
+		player.level++;
 	}
 }

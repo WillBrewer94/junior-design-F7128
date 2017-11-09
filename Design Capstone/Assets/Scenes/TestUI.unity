@@ -402,8 +402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 088187693a154b745bd57f98fa1c6b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinates: {fileID: 1193344295}
-  touchLoc: {x: 0, y: 0}
 --- !u!4 &1162790431
 Transform:
   m_ObjectHideFlags: 0

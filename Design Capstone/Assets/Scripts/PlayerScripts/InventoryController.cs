@@ -11,10 +11,7 @@ public class InventoryController : MonoBehaviour {
 	public Text nameview;
 	public Text roleview;
 	public Text levelview;
-
 	public Text itemsview;
-
-	private bool update;
 
 
 	void Start () {
@@ -22,19 +19,25 @@ public class InventoryController : MonoBehaviour {
 		roleview.text = player.role;
 		avatarview.sprite = player.avatar;
 		levelview.text = "Level " + player.level;
-
-		update = true;
+		updateInventory();
+		updateLevel();
 	}
 
 	void Update () {
-		levelview.text = "Level " + player.level;
-		if (update) {
-			itemsview.text = "";
-			foreach (KeyValuePair<string, int> item in player.items) {
-				itemsview.text += item.Value.ToString () + "x            " + item.Key.ToString () + "\n\n";
-			}
-			update = false;
-		}
-		player.level++;
+		//Add any constantly updating inventory UI items
 	}
+
+	// Update items in UI
+	public void updateInventory() {
+		itemsview.text = "";
+		foreach (KeyValuePair<string, int> item in player.items) {
+			itemsview.text += item.Value.ToString () + "x            " + item.Key.ToString () + "\n\n";
+		}
+	}
+
+	// Update level in UI
+	public void updateLevel () {
+		levelview.text = "Level " + player.level;
+	}
+
 }

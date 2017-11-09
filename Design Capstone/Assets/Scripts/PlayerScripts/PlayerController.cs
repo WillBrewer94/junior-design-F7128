@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
 	public Sprite avatar;
 	public Dictionary<string, int> items;
 
+	public InventoryController invcon;
+
 
 	void Start() {
 		// temporary item list
@@ -26,5 +28,7 @@ public class PlayerController : MonoBehaviour {
 		items.Add ("Escape Rope", 2);
 		items.Add ("Telescope", 1);
 		items.Add ("Overload Application", 3);
+
+		invcon.updateInventory();
 	}
 }

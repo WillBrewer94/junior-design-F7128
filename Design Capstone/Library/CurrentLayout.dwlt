@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 113
+  controlID: 34
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 68
+  controlID: 35
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,9 +367,9 @@ MonoBehaviour:
     height: 351
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 1664feff1864feff1a64feff2864feff2a64feff229cfeff349cfeffda52ffffdc52ffffde52ffffe052ffff5055ffff3e9dffff4c9dffff5a9dffff689dffff7c9dffff7e9dffff9e9effffa09effffd8b7ffffb6cfffffe4d6ffff16fcffff000000001233000012390000b43c0000fc3d0000c03e0000e03e0000
+    m_SelectedIDs: dae8ffff
+    m_LastClickedID: -5926
+    m_ExpandedIDs: 40ebffff14f5ffff36f6ffff16fcffff0000000014330000d6360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -558,20 +558,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Wang Wei\Documents\GitHub\junior-design-F7128\Design
     Capstone
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 762c0000
-    m_LastClickedID: 11382
-    m_ExpandedIDs: 00000000762c0000ac2d0000bc2d0000c42d0000182e00000e2f0000962f0000bc30000088310000fc31000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 463}
+    m_SelectedIDs: 8c2d0000
+    m_LastClickedID: 11660
+    m_ExpandedIDs: 00000000782c0000ae2d0000be2d0000c62d00001a2e0000102f0000982f0000c03000008c3100000032000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -599,7 +599,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000762c0000bc2d0000c42d0000182e00000e2f0000962f0000bc30000088310000fc310000
+    m_ExpandedIDs: 00000000782c0000ae2d0000be2d0000c62d00001a2e0000102f0000982f0000c03000008c31000000320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 2c25000052250000fc28000000290000d4250000000000007e280000fa270000f02300005810feff5026000054260000f4df000084d100006c250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

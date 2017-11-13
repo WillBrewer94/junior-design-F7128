@@ -2,30 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Azure.AppServices;
+using System;
+using System.Net;
+using RESTClient;
+using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class saveUsername : MonoBehaviour {
 
     public Text DisplayText;
 
     public InputField inputName;
-    public Text textName;
 
     public InputField inputEmail;
-    public Text textEmail;
 
     public InputField inputPass;
-    public Text textPass;
 
     public string savedName;
     public string savedEmail;
     public string savedPass;
-    
+
+    private string _appUrl = "http://buzzgameapp.azurewebsites.net";
+    private AppServiceClient _client;
+    private AppServiceTable<UserProfile> _table;
+    private UserProfile _user;
+
 
     // Use this for initialization
     void Start () {
         inputName.onEndEdit.AddListener(delegate { saveAll(); });
         inputEmail.onEndEdit.AddListener(delegate { saveAll(); });
         inputPass.onEndEdit.AddListener(delegate { saveAll(); });
+
+        _client = new AppServiceClient(_appUrl);
+
+        _table = _client.GetTable<UserProfile>("Users");
+
+        savedName = "Blank";
+        savedEmail = "Blank";
+        savedPass = "Blank";
     }
 	
 	// Update is called once per frame
@@ -33,6 +49,10 @@ public class saveUsername : MonoBehaviour {
         if (savedName != null)
         {
             DisplayText.text = savedName;
+        }
+        if (Input.GetKeyDown("enter"))
+        {
+            saveAll();
         }
     }
 
@@ -66,7 +86,34 @@ public class saveUsername : MonoBehaviour {
         {
             savedName = inputName.text;
             savedEmail = inputEmail.text;
-            savedName = inputEmail.text;
+            savedPass = inputPass.text;
+            DisplayText.text = savedName;
+            createPlayer(savedName, savedPass, savedEmail);
+        }
+    }
+
+    void LoginPlayer()
+    {
+
+    }
+
+    public void createPlayer(String name, String pass, String email)
+    {
+        UserProfile testBoi = new UserProfile(name, pass, email);
+        StartCoroutine(_table.Insert<UserProfile>(testBoi, OnInsertCompleted));
+    }
+
+    private void OnInsertCompleted(IRestResponse<UserProfile> response)
+    {
+        if (!response.IsError && response.StatusCode == HttpStatusCode.Created)
+        {
+            Debug.Log("OnInsertItemCompleted: " + response.Content + " status code:" + response.StatusCode + " data:" + response.Data);
+            UserProfile item = response.Data; // if successful the item will have an 'id' property value
+            _user = item;
+        }
+        else
+        {
+            Debug.LogWarning("Insert Error Status:" + response.StatusCode + " Url: " + response.Url);
         }
     }
 

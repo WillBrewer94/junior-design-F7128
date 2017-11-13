@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScreenController : MonoBehaviour {
 
 	public Transform inventory;
+	public Transform quest;
 
 	void Update () {
 			//nothing;
@@ -17,5 +18,11 @@ public class ScreenController : MonoBehaviour {
 		else
 			inventory.gameObject.SetActive (false);
 	}
-	
+
+	public void SetQuest(bool open) {
+		if (open)
+			quest.gameObject.SetActive (true);
+		else
+			quest.gameObject.SetActive (false);
+	}
 }

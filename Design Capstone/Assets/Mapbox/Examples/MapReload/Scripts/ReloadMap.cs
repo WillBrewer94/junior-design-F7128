@@ -21,12 +21,12 @@
 			_map = FindObjectOfType<AbstractMap>();
 			//_forwardGeocoder.OnGeocoderResponse += ForwardGeocoder_OnGeocoderResponse;
 			_zoomSlider.onValueChanged.AddListener(Reload);
-			_map.Initialize(_map.CenterLatitudeLongitude, 16);
+			_map.Initialize(_map.CenterLatitudeLongitude, 12);
 		}
 
 		void Start()
 		{
-			_map.Initialize(_map.CenterLatitudeLongitude, 16);
+			//_map.Initialize(_map.CenterLatitudeLongitude, 16);
 		}
 
 		void Reload(float value)

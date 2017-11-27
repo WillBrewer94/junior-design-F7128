@@ -76,29 +76,17 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Mapbox.Json">
       <HintPath>Assets\Mapbox\Core\Plugins\ThirdParty\Mapbox.Json\Net35\Mapbox.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AppServices-master\AppServiceClient.cs" />
-    <Compile Include="Assets\AppServices-master\authentication\AuthenticationProvider.cs" />
-    <Compile Include="Assets\AppServices-master\http\ZumoRequest.cs" />
-    <Compile Include="Assets\AppServices-master\IAppServiceClient.cs" />
-    <Compile Include="Assets\AppServices-master\IZumoClient.cs" />
-    <Compile Include="Assets\AppServices-master\model\AccessToken.cs" />
-    <Compile Include="Assets\AppServices-master\model\AccessTokenId.cs" />
-    <Compile Include="Assets\AppServices-master\model\AccessTokenSecret.cs" />
-    <Compile Include="Assets\AppServices-master\model\AuthenticatedUser.cs" />
-    <Compile Include="Assets\AppServices-master\model\base\DataModel.cs" />
-    <Compile Include="Assets\AppServices-master\model\base\IDataModel.cs" />
-    <Compile Include="Assets\AppServices-master\model\ResponseError.cs" />
-    <Compile Include="Assets\AppServices-master\model\User.cs" />
-    <Compile Include="Assets\AppServices-master\table\AppServiceTable.cs" />
-    <Compile Include="Assets\AppServices-master\table\IAppServiceTable.cs" />
-    <Compile Include="Assets\AppServices-master\table\query\OrderBy.cs" />
-    <Compile Include="Assets\AppServices-master\table\query\TableQuery.cs" />
-    <Compile Include="Assets\AppServices-master\ZumoClient.cs" />
     <Compile Include="Assets\InControl\Examples\Basic\BasicExample.cs" />
     <Compile Include="Assets\InControl\Examples\Bindings\BindingsExample.cs" />
     <Compile Include="Assets\InControl\Examples\Bindings\PlayerActions.cs" />
@@ -514,7 +502,6 @@
     <Compile Include="Assets\InControl\Source\XInput\XInputDotNetPure\GamePad.cs" />
     <Compile Include="Assets\InControl\Test\TestInputManager.cs" />
     <Compile Include="Assets\LoginUI\saveUsername.cs" />
-    <Compile Include="Assets\LoginUI\UserProfile.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\DirectionResource.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Directions.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Overview.cs" />
@@ -736,19 +723,6 @@
     <Compile Include="Assets\Mapbox\Unity\Utilities\StyleSearchAttribute.cs" />
     <Compile Include="Assets\Mapbox\Unity\Utilities\TelemetryConfigurationButton.cs" />
     <Compile Include="Assets\Mapbox\Unity\Utilities\VectorExtensions.cs" />
-    <Compile Include="Assets\RESTClient-master\helpers\JsonHelper.cs" />
-    <Compile Include="Assets\RESTClient-master\helpers\ReflectionHelper.cs" />
-    <Compile Include="Assets\RESTClient-master\helpers\SignatureHelper.cs" />
-    <Compile Include="Assets\RESTClient-master\helpers\UrlHelper.cs" />
-    <Compile Include="Assets\RESTClient-master\helpers\XmlHelper.cs" />
-    <Compile Include="Assets\RESTClient-master\http\IRestResponse.cs" />
-    <Compile Include="Assets\RESTClient-master\http\Method.cs" />
-    <Compile Include="Assets\RESTClient-master\http\QueryParams.cs" />
-    <Compile Include="Assets\RESTClient-master\http\RestRequest.cs" />
-    <Compile Include="Assets\RESTClient-master\http\RestResponse.cs" />
-    <Compile Include="Assets\RESTClient-master\model\INestedResults.cs" />
-    <Compile Include="Assets\RESTClient-master\model\NestedResults.cs" />
-    <Compile Include="Assets\RESTClient-master\RestClient.cs" />
     <Compile Include="Assets\Scripts\Battle Scripts\BattleManager.cs" />
     <Compile Include="Assets\Scripts\Battle Scripts\ScalingManager.cs" />
     <Compile Include="Assets\Scripts\Battle Scripts\SwipeArrow.cs" />

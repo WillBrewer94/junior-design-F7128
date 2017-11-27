@@ -182,10 +182,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1c5b3ec21733945850d4640f50a3dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisplayText: {fileID: 1301546132}
   inputName: {fileID: 304671050}
+  textName: {fileID: 1301546132}
   inputEmail: {fileID: 1085062695}
+  textEmail: {fileID: 0}
   inputPass: {fileID: 2060645854}
+  textPass: {fileID: 0}
   savedName: 
   savedEmail: 
   savedPass: 
@@ -424,6 +426,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e644d9d10d24c643a61a6dead07b94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyText: {fileID: 0}
+  MyInput: {fileID: 0}
+  userName: 
+  inputText: {fileID: 0}
 --- !u!4 &1037896643
 Transform:
   m_ObjectHideFlags: 0

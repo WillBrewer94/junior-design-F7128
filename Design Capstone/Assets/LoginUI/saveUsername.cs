@@ -104,6 +104,12 @@ public class saveUsername : MonoBehaviour
     {
         UserProfile testBoi = new UserProfile(name, pass, email);
         StartCoroutine(_table.Insert<UserProfile>(testBoi, OnInsertCompleted));
+        ProfileController.instance.name = savedName;
+        ProfileController.instance.role = "test";
+        ProfileController.instance.level = 1;
+        ProfileController.instance.avatar = null;
+
+        SceneManager.LoadScene("MainScene");
     }
 
     private void OnInsertCompleted(IRestResponse<UserProfile> response)

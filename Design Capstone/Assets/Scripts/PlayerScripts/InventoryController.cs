@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour {
 
-    public static InventoryController instance = null;
+	public PlayerController player;
 
 	public Image avatarview;
 	public Text nameview;
@@ -13,23 +13,12 @@ public class InventoryController : MonoBehaviour {
 	public Text levelview;
 	public Text itemsview;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
 
-    void Start () {
-		nameview.text = PlayerController.instance.name;
-		roleview.text = PlayerController.instance.role;
-		avatarview.sprite = PlayerController.instance.avatar;
-		levelview.text = "Level " + PlayerController.instance.level;
+	void Start () {
+		nameview.text = player.name;
+		roleview.text = player.role;
+		avatarview.sprite = player.avatar;
+		levelview.text = "Level " + player.level;
 		updateInventory();
 		updateLevel();
 	}
@@ -41,14 +30,14 @@ public class InventoryController : MonoBehaviour {
 	// Update items in UI
 	public void updateInventory() {
 		itemsview.text = "";
-		foreach (KeyValuePair<string, int> item in PlayerController.instance.items) {
+		foreach (KeyValuePair<string, int> item in player.items) {
 			itemsview.text += item.Value.ToString () + "x            " + item.Key.ToString () + "\n\n";
 		}
 	}
 
 	// Update level in UI
 	public void updateLevel () {
-		levelview.text = "Level " + PlayerController.instance.level;
+		levelview.text = "Level " + player.level;
 	}
 
 }

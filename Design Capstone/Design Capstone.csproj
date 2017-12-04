@@ -18,7 +18,7 @@
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.1.1f1</UnityVersion>
     <RootNamespace></RootNamespace>
-    <LangVersion>4</LangVersion>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,7 +28,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,7 +38,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -87,6 +87,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AppServices-master\AppServiceClient.cs" />
+    <Compile Include="Assets\AppServices-master\authentication\AuthenticationProvider.cs" />
+    <Compile Include="Assets\AppServices-master\http\ZumoRequest.cs" />
+    <Compile Include="Assets\AppServices-master\IAppServiceClient.cs" />
+    <Compile Include="Assets\AppServices-master\IZumoClient.cs" />
+    <Compile Include="Assets\AppServices-master\model\AccessToken.cs" />
+    <Compile Include="Assets\AppServices-master\model\AccessTokenId.cs" />
+    <Compile Include="Assets\AppServices-master\model\AccessTokenSecret.cs" />
+    <Compile Include="Assets\AppServices-master\model\AuthenticatedUser.cs" />
+    <Compile Include="Assets\AppServices-master\model\base\DataModel.cs" />
+    <Compile Include="Assets\AppServices-master\model\base\IDataModel.cs" />
+    <Compile Include="Assets\AppServices-master\model\ResponseError.cs" />
+    <Compile Include="Assets\AppServices-master\model\User.cs" />
+    <Compile Include="Assets\AppServices-master\table\AppServiceTable.cs" />
+    <Compile Include="Assets\AppServices-master\table\IAppServiceTable.cs" />
+    <Compile Include="Assets\AppServices-master\table\query\OrderBy.cs" />
+    <Compile Include="Assets\AppServices-master\table\query\TableQuery.cs" />
+    <Compile Include="Assets\AppServices-master\ZumoClient.cs" />
     <Compile Include="Assets\InControl\Examples\Basic\BasicExample.cs" />
     <Compile Include="Assets\InControl\Examples\Bindings\BindingsExample.cs" />
     <Compile Include="Assets\InControl\Examples\Bindings\PlayerActions.cs" />
@@ -501,7 +519,13 @@
     <Compile Include="Assets\InControl\Source\XInput\XInputDeviceManager.cs" />
     <Compile Include="Assets\InControl\Source\XInput\XInputDotNetPure\GamePad.cs" />
     <Compile Include="Assets\InControl\Test\TestInputManager.cs" />
+    <Compile Include="Assets\LoginUI\ButtonScripts.cs" />
+    <Compile Include="Assets\LoginUI\CharacterProfile.cs" />
+    <Compile Include="Assets\LoginUI\LoginScript.cs" />
+    <Compile Include="Assets\LoginUI\ProfileController.cs" />
+    <Compile Include="Assets\LoginUI\Quest.cs" />
     <Compile Include="Assets\LoginUI\saveUsername.cs" />
+    <Compile Include="Assets\LoginUI\UserProfile.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\DirectionResource.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Directions.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Overview.cs" />
@@ -723,9 +747,26 @@
     <Compile Include="Assets\Mapbox\Unity\Utilities\StyleSearchAttribute.cs" />
     <Compile Include="Assets\Mapbox\Unity\Utilities\TelemetryConfigurationButton.cs" />
     <Compile Include="Assets\Mapbox\Unity\Utilities\VectorExtensions.cs" />
+    <Compile Include="Assets\RESTClient-master\helpers\JsonHelper.cs" />
+    <Compile Include="Assets\RESTClient-master\helpers\ReflectionHelper.cs" />
+    <Compile Include="Assets\RESTClient-master\helpers\SignatureHelper.cs" />
+    <Compile Include="Assets\RESTClient-master\helpers\UrlHelper.cs" />
+    <Compile Include="Assets\RESTClient-master\helpers\XmlHelper.cs" />
+    <Compile Include="Assets\RESTClient-master\http\IRestResponse.cs" />
+    <Compile Include="Assets\RESTClient-master\http\Method.cs" />
+    <Compile Include="Assets\RESTClient-master\http\QueryParams.cs" />
+    <Compile Include="Assets\RESTClient-master\http\RestRequest.cs" />
+    <Compile Include="Assets\RESTClient-master\http\RestResponse.cs" />
+    <Compile Include="Assets\RESTClient-master\model\INestedResults.cs" />
+    <Compile Include="Assets\RESTClient-master\model\NestedResults.cs" />
+    <Compile Include="Assets\RESTClient-master\RestClient.cs" />
+    <Compile Include="Assets\Scripts\Battle Scripts\AudioProcessor.cs" />
+    <Compile Include="Assets\Scripts\Battle Scripts\BarFill.cs" />
     <Compile Include="Assets\Scripts\Battle Scripts\BattleManager.cs" />
+    <Compile Include="Assets\Scripts\Battle Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\Battle Scripts\ScalingManager.cs" />
     <Compile Include="Assets\Scripts\Battle Scripts\SwipeArrow.cs" />
+    <Compile Include="Assets\Scripts\Battle Scripts\TouchAnimScript.cs" />
     <Compile Include="Assets\Scripts\Example\SimpleController.cs" />
     <Compile Include="Assets\Scripts\Input Managers\ButtonImg.cs" />
     <Compile Include="Assets\Scripts\Input Managers\ControllerInputWrapper.cs" />

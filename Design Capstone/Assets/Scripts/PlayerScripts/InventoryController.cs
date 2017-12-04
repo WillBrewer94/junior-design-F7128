@@ -19,7 +19,6 @@ public class InventoryController : MonoBehaviour {
 		roleview.text = player.role;
 		avatarview.sprite = player.avatar;
 		levelview.text = "Level " + player.level;
-		updateInventory();
 		updateLevel();
 	}
 

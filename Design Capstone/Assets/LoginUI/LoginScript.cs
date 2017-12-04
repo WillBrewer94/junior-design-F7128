@@ -18,6 +18,9 @@ public class LoginScript : MonoBehaviour {
     public string savedEmail;
     public string savedPass;
 
+    public Button SubmitButton;
+    public Button BackButton;
+
     private string _appUrl = "http://buzzgameapp.azurewebsites.net";
     private AppServiceClient _client;
     private AppServiceTable<UserProfile> _table;
@@ -35,6 +38,11 @@ public class LoginScript : MonoBehaviour {
 
         savedEmail = "Blank";
         savedPass = "Blank";
+
+        Button btn = SubmitButton.GetComponent<Button>();
+        Button btn2 = BackButton.GetComponent<Button>();
+        btn2.onClick.AddListener(IntroLoad);
+        btn.onClick.AddListener(tryLogin);
     }
 	
 	// Update is called once per frame
@@ -97,5 +105,10 @@ public class LoginScript : MonoBehaviour {
         var orderBy = new OrderBy("id", SortDirection.desc);
         TableQuery query = new TableQuery("", 0, 0, "id,email,username,password", TableSystemProperty.nil, false, orderBy);
         StartCoroutine(_table.Query<UserProfile>(query, OnReadNestedResultsCompleted));
+    }
+
+    void IntroLoad()
+    {
+        SceneManager.LoadScene("Intro_Scene");
     }
 }

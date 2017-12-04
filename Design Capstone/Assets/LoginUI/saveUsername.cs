@@ -16,6 +16,9 @@ public class saveUsername : MonoBehaviour {
     public InputField inputPass;
     public Text textPass;
 
+    public Button SubmitButton;
+    public Button BackButton;
+
     public string savedName;
     public string savedEmail;
     public string savedPass;
@@ -26,6 +29,19 @@ public class saveUsername : MonoBehaviour {
         inputName.onEndEdit.AddListener(delegate { saveAll(); });
         inputEmail.onEndEdit.AddListener(delegate { saveAll(); });
         inputPass.onEndEdit.AddListener(delegate { saveAll(); });
+
+        _client = new AppServiceClient(_appUrl);
+
+        _table = _client.GetTable<UserProfile>("Users");
+
+        savedName = "Blank";
+        savedEmail = "Blank";
+        savedPass = "Blank";
+
+        Button btn = SubmitButton.GetComponent<Button>();
+        Button btn2 = BackButton.GetComponent<Button>();
+        btn2.onClick.AddListener(IntroLoad);
+        btn.onClick.AddListener(saveAll);
     }
 	
 	// Update is called once per frame
@@ -68,6 +84,11 @@ public class saveUsername : MonoBehaviour {
             savedEmail = inputEmail.text;
             savedName = inputEmail.text;
         }
+    }
+
+    void IntroLoad()
+    {
+        SceneManager.LoadScene("Intro_Scene");
     }
 
 }

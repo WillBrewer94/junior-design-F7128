@@ -66,8 +66,13 @@ namespace Mapbox.Examples
 				x = Input.GetAxis("Horizontal");
 				z = Input.GetAxis("Vertical");
 				y = -Input.GetAxis("Mouse ScrollWheel") * _zoomSpeed;
-				transform.localPosition += transform.forward * y + (_originalRotation * new Vector3(x * _panSpeed, 0, z * _panSpeed));
+				transform.localPosition += transform.forward * 0 + (_originalRotation * new Vector3(x * _panSpeed, 0, z * _panSpeed));
 			}
-		}
+			if (Input.GetAxis("Mouse ScrollWheel") != 0f ) // forward
+ 			{
+    			_referenceCamera.orthographicSize += Input.GetAxis("Mouse ScrollWheel")  * _zoomSpeed;
+ 			}
+			
 	}
+}
 }

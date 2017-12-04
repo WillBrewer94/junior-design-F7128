@@ -488,7 +488,6 @@
      <Compile Include="Assets\LoginUI\LoginScript.cs" />
      <Compile Include="Assets\LoginUI\ProfileController.cs" />
      <Compile Include="Assets\LoginUI\Quest.cs" />
-     <Compile Include="Assets\LoginUI\saveUsername.cs" />
      <Compile Include="Assets\LoginUI\UserProfile.cs" />
      <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\DirectionResource.cs" />
      <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Directions.cs" />
@@ -617,6 +616,7 @@
      <Compile Include="Assets\Mapbox\Examples\Scripts\ObjectInspectorModifier.cs" />
      <Compile Include="Assets\Mapbox\Examples\Scripts\PoiMarkerHelper.cs" />
      <Compile Include="Assets\Mapbox\Examples\Scripts\PositionWithLocationProvider.cs" />
+     <Compile Include="Assets\Mapbox\Examples\Scripts\PositionWithMonsters.cs" />
      <Compile Include="Assets\Mapbox\Examples\Scripts\ReverseGeocodeUserInput.cs" />
      <Compile Include="Assets\Mapbox\Examples\Scripts\RotateWithLocationProvider.cs" />
      <Compile Include="Assets\Mapbox\Examples\Voxels\Scripts\TextureScaler.cs" />

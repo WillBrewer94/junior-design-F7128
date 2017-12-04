@@ -20,6 +20,9 @@ public class saveUsername : MonoBehaviour
 
     public InputField inputPass;
 
+    public Button SubmitButton;
+    public Button BackButton;
+
     public string savedName;
     public string savedEmail;
     public string savedPass;
@@ -44,6 +47,11 @@ public class saveUsername : MonoBehaviour
         savedName = "Blank";
         savedEmail = "Blank";
         savedPass = "Blank";
+
+        Button btn = SubmitButton.GetComponent<Button>();
+        Button btn2 = BackButton.GetComponent<Button>();
+        btn2.onClick.AddListener(IntroLoad);
+        btn.onClick.AddListener(saveAll);
     }
 
     // Update is called once per frame
@@ -124,6 +132,11 @@ public class saveUsername : MonoBehaviour
         {
             Debug.LogWarning("Insert Error Status:" + response.StatusCode + " Url: " + response.Url);
         }
+    }
+
+    void IntroLoad()
+    {
+        SceneManager.LoadScene("Intro_Scene");
     }
 
 }

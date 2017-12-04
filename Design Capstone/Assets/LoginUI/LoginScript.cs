@@ -108,7 +108,7 @@ public class LoginScript : MonoBehaviour {
     }
 
     void IntroLoad()
-    {
-        SceneManager.LoadScene("Intro_Scene");
-    }
+     {
+         SceneManager.LoadScene("Intro_Scene");
+     }
 }

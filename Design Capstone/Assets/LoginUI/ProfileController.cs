@@ -18,6 +18,10 @@ public class ProfileController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            name = "test";
+            role = "test";
+            level = 0;
+            avatar = null;
         }
         else if (instance != this)
         {

@@ -22,16 +22,16 @@ public class PlayerController : MonoBehaviour {
 		/*Item i1 = new Item ("Potion of Health", "Heal");
 		Item i2 = new Item ("Staff of Seniority", "Time");
 		Item i3 = new Item ("Rat Cap", "Swag");*/
-		items.Add ("Potion of Health", 4);
-		items.Add ("Staff of Seniority", 3);
+		//items.Add ("Potion of Health", 4);
+		//items.Add ("Staff of Seniority", 3);
 		items.Add ("Rat Cap", 1);
-		items.Add ("Monster Bait", 1);
-		items.Add ("Escape Rope", 2);
-		items.Add ("Telescope", 1);
-		items.Add ("Overload Application", 3);
-		items.Add ("T1", 10);
-		items.Add ("T2", 32);
-		items.Add ("T3", 40);
+		items.Add ("FASET Nametag", 1);
+		//items.Add ("Escape Rope", 2);
+		//items.Add ("Telescope", 1);
+		//items.Add ("Overload Application", 3);
+		//items.Add ("T1", 10);
+		//items.Add ("T2", 32);
+		//items.Add ("T3", 40);
 
 
 		quests.Add("D1",40);
